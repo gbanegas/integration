@@ -31,6 +31,9 @@ gem 'spring',        group: :development
 
 gem 'execjs'
 gem 'therubyracer'
+gem 'soap4r'
+
+gem 'devise'
 # Use unicorn as the app server
 # gem 'unicorn'
 
