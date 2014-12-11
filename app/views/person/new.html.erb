@@ -1,0 +1,21 @@
+<h1>New Person</h1>
+
+ame, last_name, email, company, job_title, phone, website
+<%= form_for :person do |f| %>
+  <p>
+    <%= f.text_field :name %><br>
+    <%= f.text_field :last_name %>
+  </p>
+ 
+  <p>
+    <%= f.f.text_field :email %><br>
+    <%= f.f.text_field :company %><br>
+    <%= f.f.text_field :job_title %><br>
+    <%= f.f.text_field :phone %><br>
+    <%= f.f.text_field :website %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
