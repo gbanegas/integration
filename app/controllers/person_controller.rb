@@ -1,6 +1,13 @@
 class PersonController < ApplicationController
   def new
   end
+
+  def destroy
+  @person = Person.find(params[:id])
+  @person.destroy
+ 
+  redirect_to person_path
+end
  
   def index
     @person = Person.all
