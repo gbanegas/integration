@@ -2,6 +2,10 @@ class PersonController < ApplicationController
   def new
   end
  
+  def index
+    @person = Person.all
+  end
+
   def create
     @person = Person.new(params[:person])
 
