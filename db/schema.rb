@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141211235840) do
+ActiveRecord::Schema.define(version: 20141212011439) do
 
   create_table "companies", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -30,6 +30,15 @@ ActiveRecord::Schema.define(version: 20141211235840) do
 
   add_index "companies", ["email"], name: "index_companies_on_email", unique: true
   add_index "companies", ["reset_password_token"], name: "index_companies_on_reset_password_token", unique: true
+
+  create_table "corporates", force: true do |t|
+    t.string   "label"
+    t.integer  "person_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "corporates", ["person_id"], name: "index_corporates_on_person_id"
 
   create_table "people", force: true do |t|
     t.string   "name"
